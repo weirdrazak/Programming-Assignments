@@ -1,0 +1,39 @@
+// Razak Appiah
+// 10961911
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isPrime(int n)
+{
+    if (n <= 1)
+        return false;
+
+    for (int k = 2; k < n; k++)
+        if (n % k == 0)
+            return false;
+
+    return true;
+}
+
+
+int SumPrime(int n) {
+    int sum = 0;
+    for (int k = 2; k < n; k++) {
+        if (isPrime(k)) {
+            sum = sum + k;
+        }
+    }
+    return sum;
+}
+
+int main()
+{
+    int num;
+    cout << "Enter any number: ";
+    cin >> num;
+
+    int sum = SumPrime(num);
+    cout << "The sum is " << sum << endl;
+
+    return 0;
+}
