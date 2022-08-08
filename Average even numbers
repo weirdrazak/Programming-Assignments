@@ -1,0 +1,32 @@
+// Razak Appiah
+// 10961911
+#include <stdio.h>
+
+// Function to calculate the average
+// of even numbers
+int averageEven(int n)
+{
+    if (n % 2 != 0) {
+        printf("Invalid Input");
+        return -1;
+    }
+
+    int sum = 0, count = 0;
+    while (n >= 2) {
+
+        // count even numbers
+        count++;
+
+        // store the sum of even numbers
+        sum += n;
+        n = n - 2;
+    }
+    return sum / count;
+}
+
+int main()
+{
+    int n = 10000;
+    printf("%d", averageEven(n));
+    return 0;
+}
